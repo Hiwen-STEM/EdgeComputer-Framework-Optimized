@@ -45,7 +45,7 @@ func ping(addr string) {
 
 
 
-		//EXPERIMENTAL
+		//attempt to remove flag file GO-$Varialbe.txt
 		path2 = "/go/mem1/GO-"+strconv.Itoa(cool)+".txt"
 		for{
 			_,err := os.Stat(path2)
@@ -75,7 +75,8 @@ func ping(addr string) {
                       fmt.Println("File Reading error!\n\n")
             	   } else{
 
-		      //Experimental
+		      //Transmit the size of the file to be
+		      //transmitted
 		      conn.Write([]byte(strconv.Itoa(n)))
 		      time.Sleep(1000 * time.Millisecond)
 		      fmt.Println(n)
@@ -83,8 +84,10 @@ func ping(addr string) {
 
 
 
-		      //assign float value for number
-		      //number of iterations to u
+		      //Data will be transmitted in the form
+		      //of 65500 byte blocks at a time.
+		      //Variable u will be assigned the number of iterations that are to be made
+		      //within the for loop.
 		      var u int = (n / 65500)
 		      if n % 65500 != 0{
 		      	 u = u + 1
