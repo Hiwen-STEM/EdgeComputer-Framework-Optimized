@@ -8,6 +8,7 @@ Prerequisites:
 3. After cloning the project, go to the projects root directory and execute: git lfs fetch (doing so will retrieve the large files).
 4. Make sure Docker is installed.
 5. Remove the README.md file from edgeComputer/Memory1/ProcessImage
+6. Insert data that this framework will be working with into the carComputer's shared_folder/serve_file directory. NOTE: The data should be in the form of images.
 
 
 
