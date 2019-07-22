@@ -37,8 +37,8 @@ func ping(addr string) {
 		log.Fatal(err)
 	}
 	var cool int = 1
-    path := ""
-    path2 := ""
+    	path := ""
+    	path2 := ""
 	for {
 		path = "/go/mem1/"+strconv.Itoa(cool)+".jpg"
 
@@ -60,13 +60,10 @@ func ping(addr string) {
 			   }
 			   break
 			}
-            //time.Sleep(20*time.Millisecond)
 		}
 
 
 
-
-		fmt.Println(path)
 		file, err := os.Open(path)
         	if err != nil{
             	   fmt.Println("RETRY!!!!!\n\n")
