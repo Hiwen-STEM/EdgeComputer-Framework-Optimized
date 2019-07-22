@@ -72,7 +72,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 	 buffer := make([]byte, maxDatagramSize)
 	 numBytes, _, _ := conn.ReadFromUDP(buffer)
 
-	 //This chunk of code prevents the creation reading of
+	 //This chunk of code prevents the transfer of
 	 //data into a new file pre-maturely.
 	 //As some files may contain useless data at the end.
 	 if flag1 != 1{
