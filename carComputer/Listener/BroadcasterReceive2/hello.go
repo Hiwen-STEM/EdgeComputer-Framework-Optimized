@@ -31,7 +31,7 @@ func msgHandler(src *net.UDPAddr, n int, b []byte) {
 // Listen binds to the UDP address and port given and writes packets received
 // from that address to a buffer which is passed to a hander
 func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
-     // Parse the string address and
+     // concatenate the string address and
      //set variables that will
      //assist in the creation of new files
      //and prvent data from being read to a file
