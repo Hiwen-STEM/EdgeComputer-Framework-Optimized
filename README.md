@@ -8,7 +8,7 @@ Prerequisites:
 3. After cloning the project, go to the projects root directory and execute: git lfs fetch (doing so will retrieve the large files).
 4. Make sure Docker is installed.
 5. Remove the README.md file from edgeComputer/Memory1/ProcessImage
-6. Insert data that this framework will be working with into the carComputer's shared_folder/serve_file directory. NOTE: The data should be in the form of images.
+6. Though there is already data within /shared_folder/serve_file, you can erase the images and insert your own data. *NOTE: This data should be in the form of images in the .jpg format. Also, this framework assumes that all images used as data are able to be fused. If you would like to see if your images are able to be fused (stitched), give them to the stitching software under the STITCH directory as input. Just read over the README.md file to learn how to use the software...
 
 
 
