@@ -136,7 +136,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 
 
 
-//credit for code listening on port 3001 goes to user dmichael on github
+//credit for code listening on port 4001 (originally 3001) goes to user dmichael on github
 func main() {
      var wg sync.WaitGroup
 
