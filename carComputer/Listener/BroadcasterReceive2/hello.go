@@ -39,6 +39,10 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
      var upper int = 0
      var cooler int = 34
      var popper int = 1
+     var checker int = 0
+     var mimicker int = 0
+     var flag1 int = 1
+	
      path := "/go/mydata/"+strconv.Itoa(popper)+".jpg"
 
      //bind to udp address
@@ -61,10 +65,8 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
      if err != nil {
             fmt.Println("File Creation error!!\n")
      }
-
-     var checker int = 0
-     var mimicker int = 0
-     var flag1 int = 1
+	
+	
  
      //Loop forever reading from the socket
      for {
