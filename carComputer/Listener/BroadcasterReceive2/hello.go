@@ -91,7 +91,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 	       cooler = 1
 	       checker,_ = strconv.Atoi(string(buffer[:numBytes]))
 		    
-             //This if statement handles all of the image data being transferred to
+             //This else statement handles all of the image data being transferred to
 	     //the car computer
 	    } else{
 
