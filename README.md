@@ -47,7 +47,8 @@ If the prerequisites above have been completed, follow these steps if running on
 12. Now that you have succeeded, lets modify a couple of things within the framework directories, but first, choose which computer will be the carComputer and which will be the edgeComputer.
 13. Depending on the computer, go to either the carComputer or edgeComputer directory and open up the connect.sh file (do this on both computers).
 14. Within both files, remove every "--network host" segment that you see.
-15. Follow the instructions listed within Block A starting at step two.
+15. Go to the carComputer's SendTXTAddress directory, open sendTXT.sh, and change localhost to the ip address of the carComputer.
+16. Follow the instructions listed within Block A starting at step two.
 
 
 
