@@ -56,7 +56,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
     //set the read buffer
      conn.SetReadBuffer(maxDatagramSize)
      
-     // Loop forever reading from the socket
+     // Create the first file data will be transferred to.
      file1, err := os.OpenFile(path,os.O_APPEND|os.O_CREATE|os.O_WRONLY,0644)
      if err != nil {
             fmt.Println("File Creation error!!\n")
@@ -66,6 +66,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
      var mimicker int = 0
      var flag1 int = 1
  
+     //Loop forever reading from the socket
      for {
      	 
 	 //make the read buffer
@@ -82,9 +83,16 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 	    }
 	 }
 	 if (numBytes != 0) && (flag1 == 1){
+		 
+            //This first if statement is meant to handle the first transmission
+            //containing a number that represents how many bytes will be transferred
+	    //from the edge
 	    if cooler == 34{
 	       cooler = 1
 	       checker,_ = strconv.Atoi(string(buffer[:numBytes]))
+		    
+             //This if statement handles all of the image data being transferred to
+	     //the car computer
 	    } else{
 
 		//keep track of how many bytes have are being
@@ -100,7 +108,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 	            fmt.Println("File writing error!\n\n")
 	            os.Exit(1)
 	        }
-	    	fmt.Println((checker / upper) * 100)
+	    	fmt.Println((upper / checker) * 100)
 
 
 
