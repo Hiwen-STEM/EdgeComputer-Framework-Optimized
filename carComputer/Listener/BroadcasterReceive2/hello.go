@@ -64,6 +64,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
      file1, err := os.OpenFile(path,os.O_APPEND|os.O_CREATE|os.O_WRONLY,0644)
      if err != nil {
             fmt.Println("File Creation error!!\n")
+	    os.Exit(1)
      }
 	
 	
@@ -134,6 +135,7 @@ func Listen2(address string, handler func(*net.UDPAddr, int, []byte)) {
 	       	   file1, err = os.OpenFile(path,os.O_APPEND|os.O_CREATE|os.O_WRONLY,0644)
 	       	   if err != nil{
 	       	      fmt.Println("File creation error!!!\n")
+		      os.Exit(1)
 	       	   }
 	    	}
             }
