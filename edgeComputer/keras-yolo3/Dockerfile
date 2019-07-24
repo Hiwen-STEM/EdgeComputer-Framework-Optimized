@@ -13,7 +13,7 @@ RUN apt-get install python-dev
 RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y python3-dev
 RUN pip3 install tornado
 
-RUN apt-get install bash
+RUN apt-get update && apt-get install bash
 
 RUN apt-get update && apt-get install -y libsm6 libxext6
 RUN apt-get update && apt-get install -y libxrender-dev
