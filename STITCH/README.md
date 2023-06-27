@@ -17,3 +17,5 @@ Examples:
 
 3. python t.py -i ../data -o 1.jpg
 (the images are located within the data directory which is reacheable through the parent directory and 1.jpg is the output file located in the working directory)
+
+***The t.py script was issued through UNT PhD students. HIWEN-STEM integrated it into the framework.
